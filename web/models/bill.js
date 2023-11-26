@@ -18,6 +18,24 @@ class BillModel {
     })
   }
 
+    /** 获取收入分类 */
+    static async getIncomeCategoryList() {
+      return await Http.request({
+        url: "category/list/income",
+        method: "POST"
+       
+      })
+    }
+
+      /** 获取支付分类 */
+  static async getConsumeCategoryList() {
+    return await Http.request({
+      url: "category/list/consume",
+      method: "POST"
+      
+    })
+  }
+
   /**
    * 加载分页
    */

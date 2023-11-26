@@ -77,4 +77,23 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=534 DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (1,  '三餐');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (2, '购物');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (3,  '零食');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (4,  '水果');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (5, '出行');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (6,  '修车');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (7,  '学习');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (8,  '小孩');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (9,  '送礼');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (10,  '购物');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (13,  '工资');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (14,  '奖金');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (15,  '理财');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (16,  '生活费');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (17,  '兼职');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (18,  '报销');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (19,  '退款');
+INSERT INTO `hvfish_bill`.`category` (`id`, `name`) VALUES (20,  '礼金');
+
 SET FOREIGN_KEY_CHECKS = 1;

@@ -20,6 +20,12 @@ public class Category extends BaseEntity {
     @Id
     private Long id;
 
+    /**
+     * income:收入
+     * consume: 支出
+     */
+    private String type;
+
     private String name;
 
     private String icon;

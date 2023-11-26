@@ -4,83 +4,6 @@ import {
 import {
   Util
 } from '../../utils/utils.js'
-let consume_grids = [{
-    id: 1,
-    image: "/images/account/eat.png",
-    text: "三餐"
-  }, {
-    id: 2,
-    image: "/images/account/shopping.png",
-    text: "购物"
-  }, {
-    id: 3,
-    image: "/images/account/sock.png",
-    text: "零食"
-  }, {
-    id: 4,
-    image: "/images/account/fruit.png",
-    text: "水果"
-  }, {
-    id: 5,
-    image: "/images/account/plane.png",
-    text: "出行"
-  }, {
-    id: 6,
-    image: "/images/account/car.png",
-    text: "修车"
-  }, {
-    id: 7,
-    image: "/images/account/education.png",
-    text: "学习"
-  }, {
-    id: 8,
-    image: "/images/account/children.png",
-    text: "小孩"
-  },
-  {
-    id: 9,
-    image: "/images/account/gift.png",
-    text: "送礼"
-  },
-  {
-    id: 10,
-    image: "/images/account/pet.png",
-    text: "宠物"
-  }
-];
-let income_grids = [{
-  id: 13,
-  image: "/images/account/salary.png",
-  text: "工资"
-}, {
-  id: 14,
-  image: "/images/account/bonus.png",
-  text: "奖金"
-}, {
-  id: 15,
-  image: "/images/account/financing.png",
-  text: "理财"
-}, {
-  id: 16,
-  image: "/images/account/lifefee.png",
-  text: "生活费"
-}, {
-  id: 17,
-  image: "/images/account/vicejob.png",
-  text: "兼职"
-}, {
-  id: 18,
-  image: "/images/account/wipeout.png",
-  text: "报销"
-}, {
-  id: 19,
-  image: "/images/account/refund.png",
-  text: "退款"
-}, {
-  id: 20,
-  image: "/images/account/gift.png",
-  text: "礼金"
-}, ];
 var WxNotificationCenter = require('../../utils/wx-notify.js')
 
 Page({
@@ -90,8 +13,8 @@ Page({
     maxDate: new Date().getTime(), //最大日期
     minDate: new Date(2019, 10, 1).getTime(), //最小日期
     currentDate: new Date().getTime(), //当前日期
-    consume_grids: consume_grids, //支出宫格集合
-    income_grids: income_grids, //收入宫格集合
+    // consume_grids: [], //支出宫格集合
+    // income_grids: [], //收入宫格集合
     showDate: "今天",
 
     selectedId: 1,
@@ -111,6 +34,20 @@ Page({
    */
   onLoad: function (options) {
     let data = options.data;
+
+      BillModel.getIncomeCategoryList().then(data=>{
+        console.log(data)
+      this.setData({
+        income_grids: data
+      })
+    });
+
+     BillModel.getConsumeCategoryList().then(data =>{
+      this.setData({
+        consume_grids: data
+      })
+    });
+
     if (data) {
       data = JSON.parse(options.data);
       //根据id查询账单 然后填充内容  并且有删除按钮

@@ -1,7 +1,8 @@
 {
   "description": "项目配置文件",
   "packOptions": {
-    "ignore": []
+    "ignore": [],
+    "include": []
   },
   "setting": {
     "urlCheck": false,
@@ -38,77 +39,50 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.1",
-  "appid": "wxdf71d60a221fb230",
+  "appid": "wx0bd3f03fcf5fa975",
   "projectname": "orange-book",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "isGameTourist": false,
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
     "miniprogram": {
       "list": [
         {
-          "id": -1,
           "name": "pages/home/home",
           "pathName": "pages/home/home",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/mine/mine",
           "pathName": "pages/mine/mine",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/do/do",
           "pathName": "pages/do/do",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/welcome/welcome",
           "pathName": "pages/welcome/welcome",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/tally/tally",
           "pathName": "pages/tally/tally",
           "query": "",
           "scene": null
         },
         {
-          "id": -1,
           "name": "pages/pie/pie",
           "pathName": "pages/pie/pie",
           "query": "",
           "scene": null
         },
         {
-          "id": 6,
           "name": "pages/assay-budget/assay-budget",
           "pathName": "pages/assay-budget/assay-budget",
           "query": "",
@@ -116,5 +90,9 @@
         }
       ]
     }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
   }
 }

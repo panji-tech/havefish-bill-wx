@@ -1,6 +1,7 @@
 package com.opisir.bill.core;
 
 import com.opisir.bill.exception.http.HttpException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -27,6 +28,7 @@ import java.util.List;
  * }
  */
 @RestControllerAdvice
+@Slf4j
 public class GlobalExceptionHandle {
 
     private ExceptionCodeConfig exceptionCodeConfig;
@@ -42,6 +44,7 @@ public class GlobalExceptionHandle {
     public UnifyResponse handle(HttpServletRequest request, Exception e) {
         String method = request.getMethod();
         String requestURI = request.getRequestURI();
+        log.error("服务器异常:{}", e.getMessage(), e);
         return new UnifyResponse(999, "服务器异常，请联系后台管理人员", method + "：" + requestURI);
     }
 
